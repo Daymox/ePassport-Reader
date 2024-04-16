@@ -1,0 +1,32 @@
+{
+  "pins" : [
+    {
+      "identity" : "mrzparser",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/appintheair/MRZParser.git",
+      "state" : {
+        "revision" : "64b73fae8092b31d0a378f0d000c244470c7ac44",
+        "version" : "1.1.3"
+      }
+    },
+    {
+      "identity" : "nfcpassportreader",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AndyQ/NFCPassportReader.git",
+      "state" : {
+        "revision" : "84e11ec67a5c0d5ff54f918182fd4658801cc7f2",
+        "version" : "2.1.1"
+      }
+    },
+    {
+      "identity" : "openssl",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/krzyzanowskim/OpenSSL.git",
+      "state" : {
+        "revision" : "0faf71a188bcfdf0245cab42886b9b240ca71c52",
+        "version" : "1.1.2200"
+      }
+    }
+  ],
+  "version" : 2
+}

@@ -1,0 +1,514 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A4189BA2BC5925600284C40 /* TextFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4189B92BC5925600284C40 /* TextFormatter.swift */; };
+		0A4189BD2BC5B0E100284C40 /* MRZParser in Frameworks */ = {isa = PBXBuildFile; productRef = 0A4189BC2BC5B0E100284C40 /* MRZParser */; };
+		0A4189D12BC5DE9F00284C40 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4189CC2BC5DE9F00284C40 /* ViewController.swift */; };
+		0A4189D22BC5DE9F00284C40 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4189CD2BC5DE9F00284C40 /* PreviewView.swift */; };
+		0A4189D32BC5DE9F00284C40 /* VisionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4189CE2BC5DE9F00284C40 /* VisionViewController.swift */; };
+		0A4189D42BC5DE9F00284C40 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 0A4189CF2BC5DE9F00284C40 /* LICENSE */; };
+		0A4189D52BC5DE9F00284C40 /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4189D02BC5DE9F00284C40 /* StringUtils.swift */; };
+		0A4189D72BC5E39300284C40 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4189D62BC5E39300284C40 /* UserSettings.swift */; };
+		0A4189DA2BC5EF7E00284C40 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4189D92BC5EF7E00284C40 /* Utilities.swift */; };
+		0A51962E2BC99DA700353077 /* NFCPassportReader in Frameworks */ = {isa = PBXBuildFile; productRef = 0A51962D2BC99DA700353077 /* NFCPassportReader */; };
+		0A5196302BC99DB600353077 /* NFCPassportReader in Frameworks */ = {isa = PBXBuildFile; productRef = 0A51962F2BC99DB600353077 /* NFCPassportReader */; };
+		0A5196332BCD754C00353077 /* InstructionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5196322BCD754C00353077 /* InstructionsView.swift */; };
+		0A8BC9532BCF0BFE00A1803E /* NFCPassportReader in Frameworks */ = {isa = PBXBuildFile; productRef = 0A8BC9522BCF0BFE00A1803E /* NFCPassportReader */; };
+		0A8BC9572BCF0D6300A1803E /* MRZParser in Frameworks */ = {isa = PBXBuildFile; productRef = 0A8BC9562BCF0D6300A1803E /* MRZParser */; };
+		0A8BC9592BCF106E00A1803E /* MRZParser in Frameworks */ = {isa = PBXBuildFile; productRef = 0A8BC9582BCF106E00A1803E /* MRZParser */; };
+		0A960AEA2BBE04BA00738E81 /* ePassport_SDKApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A960AE92BBE04BA00738E81 /* ePassport_SDKApp.swift */; };
+		0A960AEC2BBE04BA00738E81 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A960AEB2BBE04BA00738E81 /* MainView.swift */; };
+		0A960AEE2BBE04BC00738E81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A960AED2BBE04BC00738E81 /* Assets.xcassets */; };
+		0A960AF12BBE04BC00738E81 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A960AF02BBE04BC00738E81 /* Preview Assets.xcassets */; };
+		0A960AF92BBE052B00738E81 /* NFCPassportReader in Frameworks */ = {isa = PBXBuildFile; productRef = 0A960AF82BBE052B00738E81 /* NFCPassportReader */; };
+		0A96BBEB2BBF4B6400D1D222 /* PassportCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A96BBEA2BBF4B6400D1D222 /* PassportCardView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0A4189B92BC5925600284C40 /* TextFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFormatter.swift; sourceTree = "<group>"; };
+		0A4189CC2BC5DE9F00284C40 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0A4189CD2BC5DE9F00284C40 /* PreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
+		0A4189CE2BC5DE9F00284C40 /* VisionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisionViewController.swift; sourceTree = "<group>"; };
+		0A4189CF2BC5DE9F00284C40 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		0A4189D02BC5DE9F00284C40 /* StringUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
+		0A4189D62BC5E39300284C40 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		0A4189D92BC5EF7E00284C40 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		0A5196312BC9CDD000353077 /* ePassport-SDK-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "ePassport-SDK-Info.plist"; sourceTree = SOURCE_ROOT; };
+		0A5196322BCD754C00353077 /* InstructionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsView.swift; sourceTree = "<group>"; };
+		0A960AE62BBE04BA00738E81 /* ePassport SDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ePassport SDK.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A960AE92BBE04BA00738E81 /* ePassport_SDKApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ePassport_SDKApp.swift; sourceTree = "<group>"; };
+		0A960AEB2BBE04BA00738E81 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		0A960AED2BBE04BC00738E81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0A960AF02BBE04BC00738E81 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0A96BBEA2BBF4B6400D1D222 /* PassportCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassportCardView.swift; sourceTree = "<group>"; };
+		0AE503F22BC7388800898CB5 /* ePassport SDK.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = "ePassport SDK.entitlements"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0A960AE32BBE04BA00738E81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A960AF92BBE052B00738E81 /* NFCPassportReader in Frameworks */,
+				0A8BC9572BCF0D6300A1803E /* MRZParser in Frameworks */,
+				0A51962E2BC99DA700353077 /* NFCPassportReader in Frameworks */,
+				0A4189BD2BC5B0E100284C40 /* MRZParser in Frameworks */,
+				0A8BC9592BCF106E00A1803E /* MRZParser in Frameworks */,
+				0A8BC9532BCF0BFE00A1803E /* NFCPassportReader in Frameworks */,
+				0A5196302BC99DB600353077 /* NFCPassportReader in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A0E353C2BBF13FE0007BF42 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0A960AEB2BBE04BA00738E81 /* MainView.swift */,
+				0A5196322BCD754C00353077 /* InstructionsView.swift */,
+				0A96BBEA2BBF4B6400D1D222 /* PassportCardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0A4189CB2BC5DE5B00284C40 /* MRZScanner */ = {
+			isa = PBXGroup;
+			children = (
+				0A4189CF2BC5DE9F00284C40 /* LICENSE */,
+				0A4189CD2BC5DE9F00284C40 /* PreviewView.swift */,
+				0A4189D02BC5DE9F00284C40 /* StringUtils.swift */,
+				0A4189CC2BC5DE9F00284C40 /* ViewController.swift */,
+				0A4189CE2BC5DE9F00284C40 /* VisionViewController.swift */,
+			);
+			path = MRZScanner;
+			sourceTree = "<group>";
+		};
+		0A4189D82BC5EC4900284C40 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0A4189B92BC5925600284C40 /* TextFormatter.swift */,
+				0A4189D62BC5E39300284C40 /* UserSettings.swift */,
+				0A4189D92BC5EF7E00284C40 /* Utilities.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0A960ADD2BBE04BA00738E81 = {
+			isa = PBXGroup;
+			children = (
+				0A960AE82BBE04BA00738E81 /* ePassport SDK */,
+				0A960AE72BBE04BA00738E81 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0A960AE72BBE04BA00738E81 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0A960AE62BBE04BA00738E81 /* ePassport SDK.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0A960AE82BBE04BA00738E81 /* ePassport SDK */ = {
+			isa = PBXGroup;
+			children = (
+				0A5196312BC9CDD000353077 /* ePassport-SDK-Info.plist */,
+				0AE503F22BC7388800898CB5 /* ePassport SDK.entitlements */,
+				0A960AE92BBE04BA00738E81 /* ePassport_SDKApp.swift */,
+				0A4189CB2BC5DE5B00284C40 /* MRZScanner */,
+				0A4189D82BC5EC4900284C40 /* Model */,
+				0A0E353C2BBF13FE0007BF42 /* Views */,
+				0A960AEF2BBE04BC00738E81 /* Preview Content */,
+				0A960AED2BBE04BC00738E81 /* Assets.xcassets */,
+			);
+			path = "ePassport SDK";
+			sourceTree = "<group>";
+		};
+		0A960AEF2BBE04BC00738E81 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				0A960AF02BBE04BC00738E81 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0A960AE52BBE04BA00738E81 /* ePassport SDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A960AF42BBE04BC00738E81 /* Build configuration list for PBXNativeTarget "ePassport SDK" */;
+			buildPhases = (
+				0A960AE22BBE04BA00738E81 /* Sources */,
+				0A960AE32BBE04BA00738E81 /* Frameworks */,
+				0A960AE42BBE04BA00738E81 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ePassport SDK";
+			packageProductDependencies = (
+				0A960AF82BBE052B00738E81 /* NFCPassportReader */,
+				0A4189BC2BC5B0E100284C40 /* MRZParser */,
+				0A51962D2BC99DA700353077 /* NFCPassportReader */,
+				0A51962F2BC99DB600353077 /* NFCPassportReader */,
+				0A8BC9522BCF0BFE00A1803E /* NFCPassportReader */,
+				0A8BC9562BCF0D6300A1803E /* MRZParser */,
+				0A8BC9582BCF106E00A1803E /* MRZParser */,
+			);
+			productName = "ePassport SDK";
+			productReference = 0A960AE62BBE04BA00738E81 /* ePassport SDK.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0A960ADE2BBE04BA00738E81 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					0A960AE52BBE04BA00738E81 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = 0A960AE12BBE04BA00738E81 /* Build configuration list for PBXProject "ePassport SDK" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0A960ADD2BBE04BA00738E81;
+			packageReferences = (
+				0A960AF72BBE052B00738E81 /* XCRemoteSwiftPackageReference "NFCPassportReader" */,
+				0A4189BB2BC5B0E100284C40 /* XCRemoteSwiftPackageReference "MRZParser" */,
+			);
+			productRefGroup = 0A960AE72BBE04BA00738E81 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0A960AE52BBE04BA00738E81 /* ePassport SDK */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0A960AE42BBE04BA00738E81 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A4189D42BC5DE9F00284C40 /* LICENSE in Resources */,
+				0A960AF12BBE04BC00738E81 /* Preview Assets.xcassets in Resources */,
+				0A960AEE2BBE04BC00738E81 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0A960AE22BBE04BA00738E81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A5196332BCD754C00353077 /* InstructionsView.swift in Sources */,
+				0A4189D52BC5DE9F00284C40 /* StringUtils.swift in Sources */,
+				0A4189D12BC5DE9F00284C40 /* ViewController.swift in Sources */,
+				0A4189D22BC5DE9F00284C40 /* PreviewView.swift in Sources */,
+				0A4189D72BC5E39300284C40 /* UserSettings.swift in Sources */,
+				0A4189DA2BC5EF7E00284C40 /* Utilities.swift in Sources */,
+				0A960AEC2BBE04BA00738E81 /* MainView.swift in Sources */,
+				0A4189D32BC5DE9F00284C40 /* VisionViewController.swift in Sources */,
+				0A4189BA2BC5925600284C40 /* TextFormatter.swift in Sources */,
+				0A96BBEB2BBF4B6400D1D222 /* PassportCardView.swift in Sources */,
+				0A960AEA2BBE04BA00738E81 /* ePassport_SDKApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0A960AF22BBE04BC00738E81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0A960AF32BBE04BC00738E81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0A960AF52BBE04BC00738E81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "ePassport SDK/ePassport SDK.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ePassport SDK/Preview Content\"";
+				DEVELOPMENT_TEAM = ZTBH29ZRG3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ePassport-SDK-Info.plist";
+				INFOPLIST_KEY_NFCReaderUsageDescription = "Mantenga su iPhone cerca de un pasaporte habilitado para NFC.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Capture MRZ";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = "nfc armv7";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = veritran.ePassportSDK;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0A960AF62BBE04BC00738E81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "ePassport SDK/ePassport SDK.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ePassport SDK/Preview Content\"";
+				DEVELOPMENT_TEAM = ZTBH29ZRG3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ePassport-SDK-Info.plist";
+				INFOPLIST_KEY_NFCReaderUsageDescription = "Mantenga su iPhone cerca de un pasaporte habilitado para NFC.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Capture MRZ";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = "nfc armv7";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = veritran.ePassportSDK;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0A960AE12BBE04BA00738E81 /* Build configuration list for PBXProject "ePassport SDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A960AF22BBE04BC00738E81 /* Debug */,
+				0A960AF32BBE04BC00738E81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A960AF42BBE04BC00738E81 /* Build configuration list for PBXNativeTarget "ePassport SDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A960AF52BBE04BC00738E81 /* Debug */,
+				0A960AF62BBE04BC00738E81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0A4189BB2BC5B0E100284C40 /* XCRemoteSwiftPackageReference "MRZParser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/appintheair/MRZParser.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.2;
+			};
+		};
+		0A960AF72BBE052B00738E81 /* XCRemoteSwiftPackageReference "NFCPassportReader" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AndyQ/NFCPassportReader.git";
+			requirement = {
+				kind = versionRange;
+				maximumVersion = 4.0.0;
+				minimumVersion = 2.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0A4189BC2BC5B0E100284C40 /* MRZParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0A4189BB2BC5B0E100284C40 /* XCRemoteSwiftPackageReference "MRZParser" */;
+			productName = MRZParser;
+		};
+		0A51962D2BC99DA700353077 /* NFCPassportReader */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0A960AF72BBE052B00738E81 /* XCRemoteSwiftPackageReference "NFCPassportReader" */;
+			productName = NFCPassportReader;
+		};
+		0A51962F2BC99DB600353077 /* NFCPassportReader */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0A960AF72BBE052B00738E81 /* XCRemoteSwiftPackageReference "NFCPassportReader" */;
+			productName = NFCPassportReader;
+		};
+		0A8BC9522BCF0BFE00A1803E /* NFCPassportReader */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0A960AF72BBE052B00738E81 /* XCRemoteSwiftPackageReference "NFCPassportReader" */;
+			productName = NFCPassportReader;
+		};
+		0A8BC9562BCF0D6300A1803E /* MRZParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0A4189BB2BC5B0E100284C40 /* XCRemoteSwiftPackageReference "MRZParser" */;
+			productName = MRZParser;
+		};
+		0A8BC9582BCF106E00A1803E /* MRZParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0A4189BB2BC5B0E100284C40 /* XCRemoteSwiftPackageReference "MRZParser" */;
+			productName = MRZParser;
+		};
+		0A960AF82BBE052B00738E81 /* NFCPassportReader */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0A960AF72BBE052B00738E81 /* XCRemoteSwiftPackageReference "NFCPassportReader" */;
+			productName = NFCPassportReader;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 0A960ADE2BBE04BA00738E81 /* Project object */;
+}
