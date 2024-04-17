@@ -140,6 +140,24 @@ struct ChipInfoView: View {
 	}
 }
 
+//struct ValidityInfoView: View {
+////	let accessControl: String
+////	let activeAuthentication: String
+////	let chipAuthentication: String
+////	let dataGroupHashes: [String]
+////	let documentSigner: String
+////	let countrySigner: String
+//	
+////	var body: some View {
+//////		LabelValuePair(label: "Control de Acceso", value: accessControl)
+//////		LabelValuePair(label: "Autenticación Activa", value: activeAuthentication)
+//////		LabelValuePair(label: "Autenticación del Chip", value: chipAuthentication)
+//////		LabelValuePair(label: "Data Group Hashes", value: dataGroupHashes)
+//////		LabelValuePair(label: "Firma del Documento", value: documentSigner)
+//////		LabelValuePair(label: "Firma del País", value: countrySigner)
+////	}
+//}
+
 func dateFormatter(_ date: String) -> String {
 	let year = String(date.prefix(2))
 	let month = String(date.dropFirst(2).prefix(2))

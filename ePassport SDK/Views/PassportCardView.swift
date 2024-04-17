@@ -18,6 +18,7 @@ struct PassportCardView: View {
 	@State var isPersonalInfoExpanded = false
 	@State var isDocumentsExpanded = false
 	@State var isChipInfoExpanded = false
+	@State var isValidityInfoExpanded = false
 	
 	var body: some View {
 		VStack {
@@ -60,8 +61,8 @@ struct PassportCardView: View {
 					ChipInformation(passport: $passport)
 				}
 			}
-			Section(header: disclosureHeader(title: "Chip", isExpanded: $isChipInfoExpanded)) {
-				if isChipInfoExpanded {
+			Section(header: disclosureHeader(title: "Validación Información", isExpanded: $isValidityInfoExpanded)) {
+				if isValidityInfoExpanded {
 					ChipInformation(passport: $passport)
 				}
 			}
@@ -78,7 +79,12 @@ struct PersonalInformation: View {
 	@Binding var passport: NFCPassportModel
 	
 	var body: some View {
-		PersonalInfoView(name: passport.firstName, lastName: passport.lastName, country: passport.nationality, birthDate: dateFormatter(passport.dateOfBirth), gender: passport.gender)
+		PersonalInfoView(
+			name: passport.firstName,
+			lastName: passport.lastName,
+			country: passport.nationality,
+			birthDate: dateFormatter(passport.dateOfBirth),
+			gender: passport.gender)
 	}
 }
 
@@ -87,9 +93,14 @@ struct DocumentInformation: View {
 	@Binding var passport: NFCPassportModel
 	
 	var body: some View {
-		PassportInfoView(title: "Pasaporte", documentNumber: passport.documentNumber, expirationDate: dateFormatter(passport.documentExpiryDate))
-		DniInfoView(title: "DNI", documentNumber: passport.personalNumber ?? "")
+		PassportInfoView(
+			title: "Pasaporte",
+			documentNumber: passport.documentNumber,
+			expirationDate: dateFormatter(passport.documentExpiryDate))
 		
+		DniInfoView(
+			title: "DNI",
+			documentNumber: passport.personalNumber ?? "")
 	}
 }
 
@@ -98,9 +109,26 @@ struct ChipInformation: View {
 	@Binding var passport: NFCPassportModel
 	
 	var body: some View {
-		ChipInfoView(ldsVersion: passport.LDSVersion, dataGroup: passport.dataGroupsPresent)
+		ChipInfoView(
+			ldsVersion: passport.LDSVersion,
+			dataGroup: passport.dataGroupsPresent)
 	}
 }
+
+//struct ValidityInformation: View {
+//	
+//	@Binding var passport: NFCPassportModel
+//	
+//	var body: some View {
+//		ValidityInfoView(
+//			accessControl: passport.cardAccess,
+//			activeAuthentication: passport.activeAuthenticationPassed
+//			chipAuthentication: passport.chipAuthentication,
+//			dataGroupHashes: passport.dataGroupHashes,
+//			documentSigner: passport.documentSigningCertificate,
+//			countrySigner: passport.countrySigningCertificate)
+//	}
+//}
 
 struct PassportCard: PreviewProvider {
 	static var previews: some View {
