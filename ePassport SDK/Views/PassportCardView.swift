@@ -80,12 +80,6 @@ func dateFormatter(_ date: String) -> String {
 	return result
 }
 
-func dniFormatter(_ dni: String) -> String {
-	let result = String(dni.dropFirst(2))
-	
-	return result
-}
-
 struct PersonalInformation: View {
 	
 	@Binding var passport: NFCPassportModel
@@ -108,7 +102,7 @@ struct DocumentInformation: View {
 	var body: some View {
 		VStack(alignment: .leading) {
 			PassportInfoView(title: "Pasaporte", documentNumber: passport.documentNumber, expirationDate: dateFormatter(passport.documentExpiryDate))
-			DniInfoView(title: "DNI", documentNumber: dniFormatter(passport.personalNumber ?? ""))
+			DniInfoView(title: "DNI", documentNumber: passport.personalNumber ?? "")
 		}
 	}
 }
