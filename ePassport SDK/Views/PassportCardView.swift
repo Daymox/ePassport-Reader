@@ -21,19 +21,16 @@ struct PassportCardView: View {
 	
 	var body: some View {
 		VStack {
-			personalInfoSection
-			documentInfoSection
+			headerSection
+			chipInformationSection
 		}
 	}
 	
-	private var personalInfoSection: some View {
+	private var headerSection: some View {
 		HStack {
 			VStack(alignment: .leading) {
-				Header(label: "Nombre: ", value: passport.firstName)
-				HStack {
-					Header(label: "Genero ", value: passport.gender)
-					Spacer()
-				}
+				Header(label: "Nombre", value: passport.firstName)
+				Header(label: "Genero ", value: passport.gender)
 			}
 			Spacer()
 			Image(uiImage: passport.passportImage ?? UIImage(named: "user")!)
@@ -46,7 +43,7 @@ struct PassportCardView: View {
 		.padding(.horizontal)
 	}
 	
-	private var documentInfoSection: some View {
+	private var chipInformationSection: some View {
 		List {
 			Section(header: disclosureHeader(title: "Información Personal", isExpanded: $isPersonalInfoExpanded)) {
 				if isPersonalInfoExpanded {
@@ -63,6 +60,11 @@ struct PassportCardView: View {
 					ChipInformation(passport: $passport)
 				}
 			}
+			Section(header: disclosureHeader(title: "Chip", isExpanded: $isChipInfoExpanded)) {
+				if isChipInfoExpanded {
+					ChipInformation(passport: $passport)
+				}
+			}
 		}
 	}
 	
@@ -71,27 +73,12 @@ struct PassportCardView: View {
 	}
 }
 
-func dateFormatter(_ date: String) -> String {
-	let year = String(date.prefix(2))
-	let month = String(date.dropFirst(2).prefix(2))
-	let day = String(date.dropFirst(4))
-	let result = "\(day) - \(month) - \(Int(year)! + 2000) "
-	
-	return result
-}
-
 struct PersonalInformation: View {
 	
 	@Binding var passport: NFCPassportModel
 	
 	var body: some View {
-		VStack(alignment: .leading) {
-			LabelValuePair(label: "Nombre(s)", value: passport.firstName)
-			LabelValuePair(label: "Apellidos", value: passport.lastName)
-			LabelValuePair(label: "País", value: passport.nationality)
-			LabelValuePair(label: "Fecha de Nac.", value: dateFormatter(passport.dateOfBirth))
-			LabelValuePair(label: "Sexo", value: passport.gender)
-		}
+		PersonalInfoView(name: passport.firstName, lastName: passport.lastName, country: passport.nationality, birthDate: dateFormatter(passport.dateOfBirth), gender: passport.gender)
 	}
 }
 
@@ -100,10 +87,9 @@ struct DocumentInformation: View {
 	@Binding var passport: NFCPassportModel
 	
 	var body: some View {
-		VStack(alignment: .leading) {
-			PassportInfoView(title: "Pasaporte", documentNumber: passport.documentNumber, expirationDate: dateFormatter(passport.documentExpiryDate))
-			DniInfoView(title: "DNI", documentNumber: passport.personalNumber ?? "")
-		}
+		PassportInfoView(title: "Pasaporte", documentNumber: passport.documentNumber, expirationDate: dateFormatter(passport.documentExpiryDate))
+		DniInfoView(title: "DNI", documentNumber: passport.personalNumber ?? "")
+		
 	}
 }
 
@@ -112,9 +98,7 @@ struct ChipInformation: View {
 	@Binding var passport: NFCPassportModel
 	
 	var body: some View {
-		VStack(alignment: .leading) {
-			LabelValuePair(label: "Versión LDS", value: passport.LDSVersion)
-		}
+		ChipInfoView(ldsVersion: passport.LDSVersion, dataGroup: passport.dataGroupsPresent)
 	}
 }
 
