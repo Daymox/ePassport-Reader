@@ -81,7 +81,7 @@ struct PassportInfoView: View {
 				.fontWeight(.bold)
 				.padding(.bottom)
 			LabelValuePair(label: "Número de Pasaporte", value: documentNumber)
-			LabelValuePair(label: "Fecha de Expiración", value: expirationDate)
+			LabelValuePair(label: "Fecha de Exp.", value: expirationDate)
 				.foregroundColor(.secondary)
 		}
 		.padding(.vertical)

@@ -71,17 +71,32 @@ struct PassportCardView: View {
 	}
 }
 
+func dateFormatter(_ date: String) -> String {
+	let year = String(date.prefix(2))
+	let month = String(date.dropFirst(2).prefix(2))
+	let day = String(date.dropFirst(4))
+	let result = "\(day) - \(month) - \(Int(year)! + 2000) "
+	
+	return result
+}
+
+func dniFormatter(_ dni: String) -> String {
+	let result = String(dni.dropFirst(2))
+	
+	return result
+}
+
 struct PersonalInformation: View {
 	
 	@Binding var passport: NFCPassportModel
 	
 	var body: some View {
 		VStack(alignment: .leading) {
-			LabelValuePair(label: "Nombre(s):", value: passport.firstName)
+			LabelValuePair(label: "Nombre(s)", value: passport.firstName)
 			LabelValuePair(label: "Apellidos", value: passport.lastName)
-			LabelValuePair(label: "País:", value: passport.nationality)
-			LabelValuePair(label: "Fecha de Nacimiento:", value: passport.dateOfBirth)
-			LabelValuePair(label: "Sexo:", value: passport.gender)
+			LabelValuePair(label: "País", value: passport.nationality)
+			LabelValuePair(label: "Fecha de Nac.", value: dateFormatter(passport.dateOfBirth))
+			LabelValuePair(label: "Sexo", value: passport.gender)
 		}
 	}
 }
@@ -92,8 +107,8 @@ struct DocumentInformation: View {
 	
 	var body: some View {
 		VStack(alignment: .leading) {
-			PassportInfoView(title: "Pasaporte", documentNumber: passport.documentNumber, expirationDate: passport.documentExpiryDate)
-			DniInfoView(title: "DNI", documentNumber: passport.personalNumber ?? "")
+			PassportInfoView(title: "Pasaporte", documentNumber: passport.documentNumber, expirationDate: dateFormatter(passport.documentExpiryDate))
+			DniInfoView(title: "DNI", documentNumber: dniFormatter(passport.personalNumber ?? ""))
 		}
 	}
 }
