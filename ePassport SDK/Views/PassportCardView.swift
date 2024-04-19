@@ -63,14 +63,14 @@ struct PassportCardView: View {
 			}
 			Section(header: disclosureHeader(title: "Validación Información", isExpanded: $isValidityInfoExpanded)) {
 				if isValidityInfoExpanded {
-					ChipInformation(passport: $passport)
+					ValidityInformation(passport: $passport)
 				}
 			}
 		}
 	}
 	
 	private func disclosureHeader(title: String, isExpanded: Binding<Bool>) -> some View {
-		DisclosureHeader(title: title, isExpanded: isExpanded)
+		DisclosureHeader(title: title, passport: $passport, isExpanded: isExpanded)
 	}
 }
 
@@ -115,20 +115,20 @@ struct ChipInformation: View {
 	}
 }
 
-//struct ValidityInformation: View {
-//	
-//	@Binding var passport: NFCPassportModel
-//	
-//	var body: some View {
-//		ValidityInfoView(
+struct ValidityInformation: View {
+	
+	@Binding var passport: NFCPassportModel
+	
+	var body: some View {
+		ValidityInfoView(passport: $passport)
 //			accessControl: passport.cardAccess,
-//			activeAuthentication: passport.activeAuthenticationPassed
+//			activeAuthentication: passport.activeAuthenticationPassed,
 //			chipAuthentication: passport.chipAuthentication,
 //			dataGroupHashes: passport.dataGroupHashes,
 //			documentSigner: passport.documentSigningCertificate,
 //			countrySigner: passport.countrySigningCertificate)
-//	}
-//}
+	}
+}
 
 struct PassportCard: PreviewProvider {
 	static var previews: some View {

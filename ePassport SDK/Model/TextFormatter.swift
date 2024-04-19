@@ -6,9 +6,12 @@
 //
 
 import SwiftUI
+import NFCPassportReader
 
 struct DisclosureHeader: View {
 	let title: String
+	
+	@Binding var passport: NFCPassportModel
 	@Binding var isExpanded: Bool
 	
 	var body: some View {
@@ -140,23 +143,60 @@ struct ChipInfoView: View {
 	}
 }
 
-//struct ValidityInfoView: View {
-////	let accessControl: String
-////	let activeAuthentication: String
-////	let chipAuthentication: String
-////	let dataGroupHashes: [String]
-////	let documentSigner: String
-////	let countrySigner: String
-//	
-////	var body: some View {
-//////		LabelValuePair(label: "Control de Acceso", value: accessControl)
-//////		LabelValuePair(label: "Autenticación Activa", value: activeAuthentication)
-//////		LabelValuePair(label: "Autenticación del Chip", value: chipAuthentication)
-//////		LabelValuePair(label: "Data Group Hashes", value: dataGroupHashes)
-//////		LabelValuePair(label: "Firma del Documento", value: documentSigner)
-//////		LabelValuePair(label: "Firma del País", value: countrySigner)
-////	}
-//}
+struct ValidityInfoView: View {
+	@Binding var passport: NFCPassportModel
+
+	var body: some View {
+		let accessControl: String = {
+			if passport.PACEStatus == .success {
+				return "PACE"
+			} else if passport.BACStatus == .success {
+				return "BAC"
+			} else if passport.PACEStatus == .success && passport.BACStatus == .success {
+				return "SAC"
+			}else {
+				return "Unknown"
+			}
+		}()
+		
+		var activeAuthentication: String
+		if passport.isChipAuthenticationSupported {
+			switch passport.chipAuthenticationStatus {
+			case .success:
+				activeAuthentication = "SUCCESS"
+			case .failed:
+				activeAuthentication = "FAILED"
+			case .notDone:
+				activeAuthentication = "NOT SUPPORTED"
+			}
+		} else {
+			activeAuthentication = "NOT SUPPORTED"
+		}
+		
+		let chipAuthentication: String = {
+			if passport.chipAuthenticationStatus == .success {
+				return "SUCCESS"
+			} else if passport.chipAuthenticationStatus == .failed {
+				return "FAILED"
+			} else {
+				return "Not Done"
+			}
+		}()
+		
+//		func getHashesInformation(_ passport: NFCPassportModel) -> [Item] { // Crear item para iterar (después de la reunión)
+//
+//		}
+		
+		return VStack {
+			LabelValuePair(label: "Access Control", value: accessControl)
+			LabelValuePair(label: "Active Authentication", value: activeAuthentication)
+			LabelValuePair(label: "Chio Authentication", value: chipAuthentication)
+			LabelValuePair(label: "Data Group Hashes", value: passport.passportDataNotTampered ? "SUCCESS" : "FAILED")
+			LabelValuePair(label: "Document Signing", value: passport.passportCorrectlySigned ? "SUCCESS" : "FAILED")
+//			LabelValuePair(label: "Country Signing", value: passport.countrySigningCertificate ? "SUCCESS" : "FAILED")
+		}
+	}
+}
 
 func dateFormatter(_ date: String) -> String {
 	let year = String(date.prefix(2))
