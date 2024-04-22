@@ -15,8 +15,9 @@ final class UserSettings: ObservableObject {
 		static let documentNumber = "documentNumber"
 		static let birthDate = "birthDate"
 		static let expiryDate = "expiryDate"
+		static let newVerification = "newVerification"
 		
-		static let allVals = [documentNumber, birthDate, expiryDate]
+		static let allVals = [documentNumber, birthDate, expiryDate, newVerification]
 	}
 	
 	private let cancellable: Cancellable
@@ -60,6 +61,15 @@ final class UserSettings: ObservableObject {
 		get {
 			let d = Date(timeIntervalSince1970: defaults.double(forKey: Keys.expiryDate))
 			return d
+		}
+	}
+	
+	var newVerification: Bool {
+		set {
+			defaults.set(newValue, forKey: Keys.newVerification)
+		}
+		get {
+			defaults.bool(forKey: Keys.newVerification)
 		}
 	}
 	

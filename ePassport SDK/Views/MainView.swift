@@ -93,6 +93,14 @@ extension MainView {
 		let utilities = Utilities()
 		let mrzKey = utilities.getMRZKey(passportNumber: documentNumber, dateOfBirth: birthDate, dateOfExpiry: expiryDate)
 		
+		if let masterList = Bundle.main.url(forResource: "masterList", withExtension: ".pem") {
+			passportReader.setMasterListURL(masterList)
+		} else {
+			print("MasterList.pem no se encontró")
+		}
+
+		passportReader.passiveAuthenticationUsesOpenSSL = !userSettings.newVerification
+		
 		Task {
 			do {
 				let passport = try await passportReader.readPassport(mrzKey: mrzKey)

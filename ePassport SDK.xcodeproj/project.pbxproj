@@ -121,9 +121,9 @@
 		0A960AE82BBE04BA00738E81 /* ePassport SDK */ = {
 			isa = PBXGroup;
 			children = (
-				0ADD8C6B2BD6E20700E59E6E /* masterList.pem */,
 				0A5196312BC9CDD000353077 /* ePassport-SDK-Info.plist */,
 				0AE503F22BC7388800898CB5 /* ePassport SDK.entitlements */,
+				0ADD8C6B2BD6E20700E59E6E /* masterList.pem */,
 				0A960AE92BBE04BA00738E81 /* ePassport_SDKApp.swift */,
 				0A4189CB2BC5DE5B00284C40 /* MRZScanner */,
 				0A4189D82BC5EC4900284C40 /* Model */,
