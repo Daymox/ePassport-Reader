@@ -8,6 +8,12 @@
 import SwiftUI
 import NFCPassportReader
 
+struct Item: Identifiable {
+	var id = UUID()
+	var title: String
+	var value: String
+}
+
 struct DisclosureHeader: View {
 	let title: String
 	
@@ -183,17 +189,12 @@ struct ValidityInfoView: View {
 			}
 		}()
 		
-//		func getHashesInformation(_ passport: NFCPassportModel) -> [Item] { // Crear item para iterar (después de la reunión)
-//
-//		}
-		
 		return VStack {
 			LabelValuePair(label: "Access Control", value: accessControl)
 			LabelValuePair(label: "Active Authentication", value: activeAuthentication)
-			LabelValuePair(label: "Chio Authentication", value: chipAuthentication)
+			LabelValuePair(label: "Chip Authentication", value: chipAuthentication)
 			LabelValuePair(label: "Data Group Hashes", value: passport.passportDataNotTampered ? "SUCCESS" : "FAILED")
 			LabelValuePair(label: "Document Signing", value: passport.passportCorrectlySigned ? "SUCCESS" : "FAILED")
-//			LabelValuePair(label: "Country Signing", value: passport.countrySigningCertificate ? "SUCCESS" : "FAILED")
 		}
 	}
 }

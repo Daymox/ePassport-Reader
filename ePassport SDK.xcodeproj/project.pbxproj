@@ -28,6 +28,7 @@
 		0A960AF12BBE04BC00738E81 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A960AF02BBE04BC00738E81 /* Preview Assets.xcassets */; };
 		0A960AF92BBE052B00738E81 /* NFCPassportReader in Frameworks */ = {isa = PBXBuildFile; productRef = 0A960AF82BBE052B00738E81 /* NFCPassportReader */; };
 		0A96BBEB2BBF4B6400D1D222 /* PassportCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A96BBEA2BBF4B6400D1D222 /* PassportCardView.swift */; };
+		0ADD8C6C2BD6E20700E59E6E /* masterList.pem in Resources */ = {isa = PBXBuildFile; fileRef = 0ADD8C6B2BD6E20700E59E6E /* masterList.pem */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		0A960AED2BBE04BC00738E81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A960AF02BBE04BC00738E81 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0A96BBEA2BBF4B6400D1D222 /* PassportCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassportCardView.swift; sourceTree = "<group>"; };
+		0ADD8C6B2BD6E20700E59E6E /* masterList.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = masterList.pem; sourceTree = "<group>"; };
 		0AE503F22BC7388800898CB5 /* ePassport SDK.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = "ePassport SDK.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,6 +121,7 @@
 		0A960AE82BBE04BA00738E81 /* ePassport SDK */ = {
 			isa = PBXGroup;
 			children = (
+				0ADD8C6B2BD6E20700E59E6E /* masterList.pem */,
 				0A5196312BC9CDD000353077 /* ePassport-SDK-Info.plist */,
 				0AE503F22BC7388800898CB5 /* ePassport SDK.entitlements */,
 				0A960AE92BBE04BA00738E81 /* ePassport_SDKApp.swift */,
@@ -212,6 +215,7 @@
 			files = (
 				0A4189D42BC5DE9F00284C40 /* LICENSE in Resources */,
 				0A960AF12BBE04BC00738E81 /* Preview Assets.xcassets in Resources */,
+				0ADD8C6C2BD6E20700E59E6E /* masterList.pem in Resources */,
 				0A960AEE2BBE04BC00738E81 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
