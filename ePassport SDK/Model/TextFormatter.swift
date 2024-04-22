@@ -185,7 +185,7 @@ struct ValidityInfoView: View {
 			} else if passport.chipAuthenticationStatus == .failed {
 				return "FAILED"
 			} else {
-				return "Not Done"
+				return "NOT DONE"
 			}
 		}()
 		

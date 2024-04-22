@@ -74,8 +74,8 @@
 			isa = PBXGroup;
 			children = (
 				0A960AEB2BBE04BA00738E81 /* MainView.swift */,
-				0A5196322BCD754C00353077 /* InstructionsView.swift */,
 				0A96BBEA2BBF4B6400D1D222 /* PassportCardView.swift */,
+				0A5196322BCD754C00353077 /* InstructionsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
