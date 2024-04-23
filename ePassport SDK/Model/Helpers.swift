@@ -31,7 +31,7 @@ func dateFormatter(_ date: String) -> String {
 	let year = String(date.prefix(2))
 	let month = String(date.dropFirst(2).prefix(2))
 	let day = String(date.dropFirst(4))
-	let result = "\(day) - \(month) - \(Int(year)! + 2000) "
+	let result = "\(day) - \(month) - \(year)"
 	
 	return result
 }
