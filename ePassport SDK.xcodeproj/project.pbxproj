@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A4189BA2BC5925600284C40 /* TextFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4189B92BC5925600284C40 /* TextFormatter.swift */; };
 		0A4189BD2BC5B0E100284C40 /* MRZParser in Frameworks */ = {isa = PBXBuildFile; productRef = 0A4189BC2BC5B0E100284C40 /* MRZParser */; };
 		0A4189D12BC5DE9F00284C40 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4189CC2BC5DE9F00284C40 /* ViewController.swift */; };
 		0A4189D22BC5DE9F00284C40 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4189CD2BC5DE9F00284C40 /* PreviewView.swift */; };
@@ -29,10 +28,12 @@
 		0A960AF92BBE052B00738E81 /* NFCPassportReader in Frameworks */ = {isa = PBXBuildFile; productRef = 0A960AF82BBE052B00738E81 /* NFCPassportReader */; };
 		0A96BBEB2BBF4B6400D1D222 /* PassportCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A96BBEA2BBF4B6400D1D222 /* PassportCardView.swift */; };
 		0ADD8C6C2BD6E20700E59E6E /* masterList.pem in Resources */ = {isa = PBXBuildFile; fileRef = 0ADD8C6B2BD6E20700E59E6E /* masterList.pem */; };
+		0AE0F48F2BD7FF7100AAD5F0 /* PassportInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE0F48E2BD7FF7100AAD5F0 /* PassportInfo.swift */; };
+		0AE0F4912BD8013F00AAD5F0 /* PersonalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE0F4902BD8013F00AAD5F0 /* PersonalInfo.swift */; };
+		0AE0F4932BD8035D00AAD5F0 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE0F4922BD8035D00AAD5F0 /* Helpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0A4189B92BC5925600284C40 /* TextFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFormatter.swift; sourceTree = "<group>"; };
 		0A4189CC2BC5DE9F00284C40 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0A4189CD2BC5DE9F00284C40 /* PreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
 		0A4189CE2BC5DE9F00284C40 /* VisionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisionViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +50,9 @@
 		0A960AF02BBE04BC00738E81 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0A96BBEA2BBF4B6400D1D222 /* PassportCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassportCardView.swift; sourceTree = "<group>"; };
 		0ADD8C6B2BD6E20700E59E6E /* masterList.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = masterList.pem; sourceTree = "<group>"; };
+		0AE0F48E2BD7FF7100AAD5F0 /* PassportInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassportInfo.swift; sourceTree = "<group>"; };
+		0AE0F4902BD8013F00AAD5F0 /* PersonalInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfo.swift; sourceTree = "<group>"; };
+		0AE0F4922BD8035D00AAD5F0 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		0AE503F22BC7388800898CB5 /* ePassport SDK.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = "ePassport SDK.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,9 +99,11 @@
 		0A4189D82BC5EC4900284C40 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0A4189B92BC5925600284C40 /* TextFormatter.swift */,
 				0A4189D62BC5E39300284C40 /* UserSettings.swift */,
+				0AE0F4902BD8013F00AAD5F0 /* PersonalInfo.swift */,
+				0AE0F48E2BD7FF7100AAD5F0 /* PassportInfo.swift */,
 				0A4189D92BC5EF7E00284C40 /* Utilities.swift */,
+				0AE0F4922BD8035D00AAD5F0 /* Helpers.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -228,14 +234,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A5196332BCD754C00353077 /* InstructionsView.swift in Sources */,
+				0AE0F4932BD8035D00AAD5F0 /* Helpers.swift in Sources */,
 				0A4189D52BC5DE9F00284C40 /* StringUtils.swift in Sources */,
 				0A4189D12BC5DE9F00284C40 /* ViewController.swift in Sources */,
 				0A4189D22BC5DE9F00284C40 /* PreviewView.swift in Sources */,
+				0AE0F48F2BD7FF7100AAD5F0 /* PassportInfo.swift in Sources */,
 				0A4189D72BC5E39300284C40 /* UserSettings.swift in Sources */,
+				0AE0F4912BD8013F00AAD5F0 /* PersonalInfo.swift in Sources */,
 				0A4189DA2BC5EF7E00284C40 /* Utilities.swift in Sources */,
 				0A960AEC2BBE04BA00738E81 /* MainView.swift in Sources */,
 				0A4189D32BC5DE9F00284C40 /* VisionViewController.swift in Sources */,
-				0A4189BA2BC5925600284C40 /* TextFormatter.swift in Sources */,
 				0A96BBEB2BBF4B6400D1D222 /* PassportCardView.swift in Sources */,
 				0A960AEA2BBE04BA00738E81 /* ePassport_SDKApp.swift in Sources */,
 			);

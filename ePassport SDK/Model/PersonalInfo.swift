@@ -7,12 +7,36 @@
 
 import SwiftUI
 
-struct PersonalInfo: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+struct PersonalInfoView: View {
+	let name: String
+	let lastName: String
+	let country: String
+	let birthDate: String
+	let gender: String
+	
+	var body: some View {
+		VStack(alignment: .leading, spacing: 0) {
+			LabelValuePair(label: "Nombre(s)", value: name)
+			LabelValuePair(label: "Apellidos", value: lastName)
+			LabelValuePair(label: "País", value: country)
+			LabelValuePair(label: "Fecha de Nac.", value: birthDate)
+			LabelValuePair(label: "Genero", value: gender)
+		}
+		.padding(.vertical)
+	}
 }
 
-#Preview {
-    PersonalInfo()
+struct DniInfoView: View {
+	let title: String
+	let documentNumber: String
+	
+	var body: some View {
+		VStack(alignment: .leading, spacing: 8) {
+			Text(title)
+				.fontWeight(.bold)
+				.padding(.bottom)
+			LabelValuePair(label: "Documento", value: documentNumber)
+		}
+		.padding(.vertical)
+	}
 }

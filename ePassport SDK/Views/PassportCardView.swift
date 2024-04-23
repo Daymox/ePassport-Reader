@@ -19,6 +19,7 @@ struct PassportCardView: View {
 	@State var isDocumentsExpanded = false
 	@State var isChipInfoExpanded = false
 	@State var isValidityInfoExpanded = false
+	@State var isHashesInfoExpanded = false
 	
 	var body: some View {
 		VStack {
@@ -64,6 +65,11 @@ struct PassportCardView: View {
 			Section(header: disclosureHeader(title: "Validación Información", isExpanded: $isValidityInfoExpanded)) {
 				if isValidityInfoExpanded {
 					ValidityInformation(passport: $passport)
+				}
+			}
+			Section(header: disclosureHeader(title: "Información HASHES", isExpanded: $isHashesInfoExpanded)) {
+				if isHashesInfoExpanded {
+					HashesInformation(passport: $passport)
 				}
 			}
 		}
@@ -121,12 +127,15 @@ struct ValidityInformation: View {
 	
 	var body: some View {
 		ValidityInfoView(passport: $passport)
-//			accessControl: passport.cardAccess,
-//			activeAuthentication: passport.activeAuthenticationPassed,
-//			chipAuthentication: passport.chipAuthentication,
-//			dataGroupHashes: passport.dataGroupHashes,
-//			documentSigner: passport.documentSigningCertificate,
-//			countrySigner: passport.countrySigningCertificate)
+	}
+}
+
+struct HashesInformation: View {
+	
+	@Binding var passport: NFCPassportModel
+	
+	var body: some View {
+		HashesInfoView(passport: $passport)
 	}
 }
 
