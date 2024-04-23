@@ -40,7 +40,7 @@ struct ChipInfoView: View {
 	private var transformedDataGroup: String {
 		return dataGroup.map {
 			String($0.dropFirst(2))
-		}.joined(separator: " - ")
+		}.joined(separator: ", ")
 	}
 }
 
