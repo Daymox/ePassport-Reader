@@ -6,13 +6,34 @@
 //
 
 import SwiftUI
+import NFCPassportReader
 
-struct Helpers: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+func getDataGroupHashes(_ passport: NFCPassportModel) -> [LabelValuePair] {
+	var dataGroupHashes = [LabelValuePair]()
+	
+	for id in DataGroupId.allCases {
+		if let hash = passport.dataGroupHashes[id] {
+			let label = "\(hash.id)"
+			let value = """
+				SOD: \(hash.sodHash)
+
+				Computed: \(hash.computedHash)
+				"""
+			dataGroupHashes.append(LabelValuePair(label: label, value: value))
+		}
+	}
+	
+	return dataGroupHashes
 }
 
-#Preview {
-    Helpers()
+
+func dateFormatter(_ date: String) -> String {
+	let year = String(date.prefix(2))
+	let month = String(date.dropFirst(2).prefix(2))
+	let day = String(date.dropFirst(4))
+	let result = "\(day) - \(month) - \(Int(year)! + 2000) "
+	
+	return result
 }
+
+

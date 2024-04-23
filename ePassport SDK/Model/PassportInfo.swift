@@ -100,8 +100,8 @@ struct HashesInfoView: View {
 	var body: some View {
 		
 		VStack(alignment: .leading, spacing: 8) {
-			ForEach(getDataGroupHashes(passport), id: \.label) { pair in
-				LabelValuePair(label: pair.label, value: pair.value)
+			ForEach(getDataGroupHashes(passport), id: \.label) { dataGroup in
+				LabelValuePair(label: dataGroup.label, value: dataGroup.value)
 			}
 		}
 		.padding(.vertical)

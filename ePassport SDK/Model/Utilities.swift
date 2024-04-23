@@ -5,7 +5,7 @@
 //  Created by Mateo Garcia on 9/04/24.
 //
 
-import UIKit
+import SwiftUI
 import NFCPassportReader
 
 class Utilities {
@@ -48,5 +48,71 @@ class Utilities {
 		}
 		
 		return (sum % 10)
+	}
+}
+
+struct DisclosureHeader: View {
+	let title: String
+	
+	@Binding var passport: NFCPassportModel
+	@Binding var isExpanded: Bool
+	
+	var body: some View {
+		HStack {
+			Text(title)
+				.font(.headline)
+			Spacer()
+			Button(action: {
+				withAnimation {
+					self.isExpanded.toggle()
+				}
+			}) {
+				Image(systemName: isExpanded ? "chevron.down" : "chevron.right")
+					.imageScale(.medium)
+					.foregroundColor(.blue)
+			}
+		}
+		.contentShape(Rectangle())
+	}
+}
+
+struct LabelValuePair: View {
+	let id = UUID()
+	let label: String
+	let value: String
+	
+	var body: some View {
+		HStack {
+			Text(label)
+				.fontWeight(.bold)
+			Spacer()
+			Text(value)
+		}
+		.padding(.vertical)
+	}
+}
+
+struct Header: View {
+	let label: String
+	let value: String
+	
+	var body: some View {
+		VStack(alignment: .leading, spacing: 8) {
+			Text(label)
+				.fontWeight(.bold)
+			Text(value)
+		}
+		.padding(.vertical)
+	}
+}
+
+struct Instructions: View {
+	let label: String
+	
+	var body: some View {
+		Text(label)
+			.foregroundColor(.gray)
+			.opacity(0.5)
+			.padding()
 	}
 }
