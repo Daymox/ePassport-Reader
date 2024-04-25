@@ -21,6 +21,9 @@ struct MainView: View {
 	var body: some View {
 		NavigationView {
 			ZStack {
+				NavigationLink(destination: MRZScanner(completionHandler: handleMRZScan), isActive: $showScanner) {
+					EmptyView()
+				}
 				NavigationLink(destination: PassportCardView(passport: .constant(userSettings.passport ?? NFCPassportModel()), isReaded: $showPersonalData.wrappedValue), isActive: $showPersonalData) {
 					EmptyView()
 				}
@@ -30,9 +33,6 @@ struct MainView: View {
 							showScanner = true
 						}) {
 							Label("Escanear MRZ", systemImage: "camera.viewfinder")
-						}
-						.sheet(isPresented: $showScanner) {
-							MRZScanner(completionHandler: handleMRZScan)
 						}
 						
 						Button(action: {
