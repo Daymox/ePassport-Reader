@@ -47,7 +47,6 @@ struct MainView: View {
 			}
 			.navigationBarTitle("Lector ePassport", displayMode: .automatic)
 		}
-		
 	}
 }
 
