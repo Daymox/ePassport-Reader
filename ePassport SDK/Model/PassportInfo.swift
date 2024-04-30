@@ -46,7 +46,7 @@ struct ChipInfoView: View {
 
 struct ValidityInfoView: View {
 	@Binding var passport: NFCPassportModel
-
+	
 	var body: some View {
 		let accessControl: String = {
 			if passport.PACEStatus == .success {
@@ -101,9 +101,12 @@ struct HashesInfoView: View {
 		
 		VStack(alignment: .leading, spacing: 8) {
 			ForEach(getDataGroupHashes(passport), id: \.label) { dataGroup in
-				LabelValuePair(label: dataGroup.label, value: dataGroup.value)
+				Text(dataGroup.label)
+					.fontWeight(.bold)
+				Text(dataGroup.value)
+					.padding(.bottom, 20)
 			}
+			.padding(.vertical)
 		}
-		.padding(.vertical)
 	}
 }

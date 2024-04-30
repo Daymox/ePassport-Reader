@@ -21,12 +21,12 @@ final class UserSettings: ObservableObject {
 	}
 	
 	private let cancellable: Cancellable
-	private let defaults: UserDefaults
+	private let userDefaults: UserDefaults
 	
 	let objectWillChange = PassthroughSubject<Void, Never>()
 	
 	init(defaults: UserDefaults = .standard) {
-		self.defaults = defaults
+		self.userDefaults = defaults
 		
 		defaults.register(defaults: [
 			Keys.documentNumber: "",
@@ -41,35 +41,35 @@ final class UserSettings: ObservableObject {
 	}
 	
 	var documentNumber: String {
-		set { defaults.set(newValue, forKey: Keys.documentNumber) }
-		get { defaults.string(forKey: Keys.documentNumber) ?? "" }
+		set { userDefaults.set(newValue, forKey: Keys.documentNumber) }
+		get { userDefaults.string(forKey: Keys.documentNumber) ?? "" }
 	}
 	
 	var birthDate: Date {
 		set {
-			defaults.set(newValue.timeIntervalSince1970, forKey: Keys.birthDate)
+			userDefaults.set(newValue.timeIntervalSince1970, forKey: Keys.birthDate)
 		}
 		get {
-			let d = Date(timeIntervalSince1970: defaults.double(forKey: Keys.birthDate))
+			let d = Date(timeIntervalSince1970: userDefaults.double(forKey: Keys.birthDate))
 			return d
 		}
 	}
 	
 	var expiryDate: Date {
 		set {
-			defaults.set(newValue.timeIntervalSince1970, forKey: Keys.expiryDate) }
+			userDefaults.set(newValue.timeIntervalSince1970, forKey: Keys.expiryDate) }
 		get {
-			let d = Date(timeIntervalSince1970: defaults.double(forKey: Keys.expiryDate))
+			let d = Date(timeIntervalSince1970: userDefaults.double(forKey: Keys.expiryDate))
 			return d
 		}
 	}
 	
 	var newVerification: Bool {
 		set {
-			defaults.set(newValue, forKey: Keys.newVerification)
+			userDefaults.set(newValue, forKey: Keys.newVerification)
 		}
 		get {
-			defaults.bool(forKey: Keys.newVerification)
+			userDefaults.bool(forKey: Keys.newVerification)
 		}
 	}
 	
