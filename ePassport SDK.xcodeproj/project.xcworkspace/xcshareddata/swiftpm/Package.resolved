@@ -10,21 +10,12 @@
       }
     },
     {
-      "identity" : "nfcpassportreader",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/AndyQ/NFCPassportReader.git",
-      "state" : {
-        "revision" : "84e11ec67a5c0d5ff54f918182fd4658801cc7f2",
-        "version" : "2.1.1"
-      }
-    },
-    {
       "identity" : "openssl",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/krzyzanowskim/OpenSSL.git",
       "state" : {
-        "revision" : "0faf71a188bcfdf0245cab42886b9b240ca71c52",
-        "version" : "1.1.2200"
+        "revision" : "84a8ae774291a4ab1971e42908d5114d98d4b623",
+        "version" : "3.1.5004"
       }
     }
   ],

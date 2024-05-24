@@ -3,11 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A4189BD2BC5B0E100284C40 /* MRZParser in Frameworks */ = {isa = PBXBuildFile; productRef = 0A4189BC2BC5B0E100284C40 /* MRZParser */; };
 		0A4189D12BC5DE9F00284C40 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4189CC2BC5DE9F00284C40 /* ViewController.swift */; };
 		0A4189D22BC5DE9F00284C40 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4189CD2BC5DE9F00284C40 /* PreviewView.swift */; };
 		0A4189D32BC5DE9F00284C40 /* VisionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4189CE2BC5DE9F00284C40 /* VisionViewController.swift */; };
@@ -15,22 +14,18 @@
 		0A4189D52BC5DE9F00284C40 /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4189D02BC5DE9F00284C40 /* StringUtils.swift */; };
 		0A4189D72BC5E39300284C40 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4189D62BC5E39300284C40 /* UserSettings.swift */; };
 		0A4189DA2BC5EF7E00284C40 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4189D92BC5EF7E00284C40 /* Utilities.swift */; };
-		0A51962E2BC99DA700353077 /* NFCPassportReader in Frameworks */ = {isa = PBXBuildFile; productRef = 0A51962D2BC99DA700353077 /* NFCPassportReader */; };
-		0A5196302BC99DB600353077 /* NFCPassportReader in Frameworks */ = {isa = PBXBuildFile; productRef = 0A51962F2BC99DB600353077 /* NFCPassportReader */; };
 		0A5196332BCD754C00353077 /* InstructionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5196322BCD754C00353077 /* InstructionsView.swift */; };
-		0A8BC9532BCF0BFE00A1803E /* NFCPassportReader in Frameworks */ = {isa = PBXBuildFile; productRef = 0A8BC9522BCF0BFE00A1803E /* NFCPassportReader */; };
-		0A8BC9572BCF0D6300A1803E /* MRZParser in Frameworks */ = {isa = PBXBuildFile; productRef = 0A8BC9562BCF0D6300A1803E /* MRZParser */; };
-		0A8BC9592BCF106E00A1803E /* MRZParser in Frameworks */ = {isa = PBXBuildFile; productRef = 0A8BC9582BCF106E00A1803E /* MRZParser */; };
 		0A960AEA2BBE04BA00738E81 /* ePassport_SDKApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A960AE92BBE04BA00738E81 /* ePassport_SDKApp.swift */; };
 		0A960AEC2BBE04BA00738E81 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A960AEB2BBE04BA00738E81 /* MainView.swift */; };
 		0A960AEE2BBE04BC00738E81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A960AED2BBE04BC00738E81 /* Assets.xcassets */; };
 		0A960AF12BBE04BC00738E81 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A960AF02BBE04BC00738E81 /* Preview Assets.xcassets */; };
-		0A960AF92BBE052B00738E81 /* NFCPassportReader in Frameworks */ = {isa = PBXBuildFile; productRef = 0A960AF82BBE052B00738E81 /* NFCPassportReader */; };
 		0A96BBEB2BBF4B6400D1D222 /* PassportCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A96BBEA2BBF4B6400D1D222 /* PassportCardView.swift */; };
-		0ADD8C6C2BD6E20700E59E6E /* masterList.pem in Resources */ = {isa = PBXBuildFile; fileRef = 0ADD8C6B2BD6E20700E59E6E /* masterList.pem */; };
 		0AE0F48F2BD7FF7100AAD5F0 /* PassportInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE0F48E2BD7FF7100AAD5F0 /* PassportInfo.swift */; };
 		0AE0F4912BD8013F00AAD5F0 /* PersonalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE0F4902BD8013F00AAD5F0 /* PersonalInfo.swift */; };
 		0AE0F4932BD8035D00AAD5F0 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE0F4922BD8035D00AAD5F0 /* Helpers.swift */; };
+		0AEBEC0D2BEA8D1E00D93EFD /* NFCPassportReader in Frameworks */ = {isa = PBXBuildFile; productRef = 0AEBEC0C2BEA8D1E00D93EFD /* NFCPassportReader */; };
+		0AEBEC102BEA8D7000D93EFD /* MRZParser in Frameworks */ = {isa = PBXBuildFile; productRef = 0AEBEC0F2BEA8D7000D93EFD /* MRZParser */; };
+		0AEBEC132BEA8F4D00D93EFD /* NFCPassportReader in Frameworks */ = {isa = PBXBuildFile; productRef = 0AEBEC122BEA8F4D00D93EFD /* NFCPassportReader */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,7 +44,6 @@
 		0A960AED2BBE04BC00738E81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A960AF02BBE04BC00738E81 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0A96BBEA2BBF4B6400D1D222 /* PassportCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassportCardView.swift; sourceTree = "<group>"; };
-		0ADD8C6B2BD6E20700E59E6E /* masterList.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = masterList.pem; sourceTree = "<group>"; };
 		0AE0F48E2BD7FF7100AAD5F0 /* PassportInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassportInfo.swift; sourceTree = "<group>"; };
 		0AE0F4902BD8013F00AAD5F0 /* PersonalInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfo.swift; sourceTree = "<group>"; };
 		0AE0F4922BD8035D00AAD5F0 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
@@ -61,13 +55,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A960AF92BBE052B00738E81 /* NFCPassportReader in Frameworks */,
-				0A8BC9572BCF0D6300A1803E /* MRZParser in Frameworks */,
-				0A51962E2BC99DA700353077 /* NFCPassportReader in Frameworks */,
-				0A4189BD2BC5B0E100284C40 /* MRZParser in Frameworks */,
-				0A8BC9592BCF106E00A1803E /* MRZParser in Frameworks */,
-				0A8BC9532BCF0BFE00A1803E /* NFCPassportReader in Frameworks */,
-				0A5196302BC99DB600353077 /* NFCPassportReader in Frameworks */,
+				0AEBEC0D2BEA8D1E00D93EFD /* NFCPassportReader in Frameworks */,
+				0AEBEC132BEA8F4D00D93EFD /* NFCPassportReader in Frameworks */,
+				0AEBEC102BEA8D7000D93EFD /* MRZParser in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,7 +119,6 @@
 			children = (
 				0A5196312BC9CDD000353077 /* ePassport-SDK-Info.plist */,
 				0AE503F22BC7388800898CB5 /* ePassport SDK.entitlements */,
-				0ADD8C6B2BD6E20700E59E6E /* masterList.pem */,
 				0A960AE92BBE04BA00738E81 /* ePassport_SDKApp.swift */,
 				0A4189CB2BC5DE5B00284C40 /* MRZScanner */,
 				0A4189D82BC5EC4900284C40 /* Model */,
@@ -165,13 +154,9 @@
 			);
 			name = "ePassport SDK";
 			packageProductDependencies = (
-				0A960AF82BBE052B00738E81 /* NFCPassportReader */,
-				0A4189BC2BC5B0E100284C40 /* MRZParser */,
-				0A51962D2BC99DA700353077 /* NFCPassportReader */,
-				0A51962F2BC99DB600353077 /* NFCPassportReader */,
-				0A8BC9522BCF0BFE00A1803E /* NFCPassportReader */,
-				0A8BC9562BCF0D6300A1803E /* MRZParser */,
-				0A8BC9582BCF106E00A1803E /* MRZParser */,
+				0AEBEC0C2BEA8D1E00D93EFD /* NFCPassportReader */,
+				0AEBEC0F2BEA8D7000D93EFD /* MRZParser */,
+				0AEBEC122BEA8F4D00D93EFD /* NFCPassportReader */,
 			);
 			productName = "ePassport SDK";
 			productReference = 0A960AE62BBE04BA00738E81 /* ePassport SDK.app */;
@@ -202,8 +187,8 @@
 			);
 			mainGroup = 0A960ADD2BBE04BA00738E81;
 			packageReferences = (
-				0A960AF72BBE052B00738E81 /* XCRemoteSwiftPackageReference "NFCPassportReader" */,
-				0A4189BB2BC5B0E100284C40 /* XCRemoteSwiftPackageReference "MRZParser" */,
+				0AEBEC0E2BEA8D7000D93EFD /* XCRemoteSwiftPackageReference "MRZParser" */,
+				0AEBEC112BEA8F4D00D93EFD /* XCLocalSwiftPackageReference "../../Desktop/NFCPassportReader" */,
 			);
 			productRefGroup = 0A960AE72BBE04BA00738E81 /* Products */;
 			projectDirPath = "";
@@ -221,7 +206,6 @@
 			files = (
 				0A4189D42BC5DE9F00284C40 /* LICENSE in Resources */,
 				0A960AF12BBE04BC00738E81 /* Preview Assets.xcassets in Resources */,
-				0ADD8C6C2BD6E20700E59E6E /* masterList.pem in Resources */,
 				0A960AEE2BBE04BC00738E81 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -464,60 +448,36 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		0AEBEC112BEA8F4D00D93EFD /* XCLocalSwiftPackageReference "../../Desktop/NFCPassportReader" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../../Desktop/NFCPassportReader;
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCRemoteSwiftPackageReference section */
-		0A4189BB2BC5B0E100284C40 /* XCRemoteSwiftPackageReference "MRZParser" */ = {
+		0AEBEC0E2BEA8D7000D93EFD /* XCRemoteSwiftPackageReference "MRZParser" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/appintheair/MRZParser.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.1.2;
-			};
-		};
-		0A960AF72BBE052B00738E81 /* XCRemoteSwiftPackageReference "NFCPassportReader" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/AndyQ/NFCPassportReader.git";
-			requirement = {
-				kind = versionRange;
-				maximumVersion = 4.0.0;
-				minimumVersion = 2.1.1;
+				minimumVersion = 1.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		0A4189BC2BC5B0E100284C40 /* MRZParser */ = {
+		0AEBEC0C2BEA8D1E00D93EFD /* NFCPassportReader */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 0A4189BB2BC5B0E100284C40 /* XCRemoteSwiftPackageReference "MRZParser" */;
-			productName = MRZParser;
-		};
-		0A51962D2BC99DA700353077 /* NFCPassportReader */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0A960AF72BBE052B00738E81 /* XCRemoteSwiftPackageReference "NFCPassportReader" */;
 			productName = NFCPassportReader;
 		};
-		0A51962F2BC99DB600353077 /* NFCPassportReader */ = {
+		0AEBEC0F2BEA8D7000D93EFD /* MRZParser */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 0A960AF72BBE052B00738E81 /* XCRemoteSwiftPackageReference "NFCPassportReader" */;
-			productName = NFCPassportReader;
-		};
-		0A8BC9522BCF0BFE00A1803E /* NFCPassportReader */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0A960AF72BBE052B00738E81 /* XCRemoteSwiftPackageReference "NFCPassportReader" */;
-			productName = NFCPassportReader;
-		};
-		0A8BC9562BCF0D6300A1803E /* MRZParser */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0A4189BB2BC5B0E100284C40 /* XCRemoteSwiftPackageReference "MRZParser" */;
+			package = 0AEBEC0E2BEA8D7000D93EFD /* XCRemoteSwiftPackageReference "MRZParser" */;
 			productName = MRZParser;
 		};
-		0A8BC9582BCF106E00A1803E /* MRZParser */ = {
+		0AEBEC122BEA8F4D00D93EFD /* NFCPassportReader */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 0A4189BB2BC5B0E100284C40 /* XCRemoteSwiftPackageReference "MRZParser" */;
-			productName = MRZParser;
-		};
-		0A960AF82BBE052B00738E81 /* NFCPassportReader */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0A960AF72BBE052B00738E81 /* XCRemoteSwiftPackageReference "NFCPassportReader" */;
 			productName = NFCPassportReader;
 		};
 /* End XCSwiftPackageProductDependency section */
