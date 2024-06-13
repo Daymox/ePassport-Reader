@@ -13,6 +13,7 @@ struct PersonalInfoView: View {
 	let country: String
 	let birthDate: String
 	let gender: String
+	let signatureImage: UIImage
 	
 	var body: some View {
 		VStack(alignment: .leading, spacing: 0) {
@@ -21,6 +22,12 @@ struct PersonalInfoView: View {
 			LabelValuePair(label: "País", value: country)
 			LabelValuePair(label: "Fecha de Nac.", value: birthDate)
 			LabelValuePair(label: "Genero", value: gender)
+			Image(uiImage: signatureImage)
+				.resizable()
+				.renderingMode(.original)
+				.aspectRatio(contentMode: .fit)
+				.frame(width: 200, height: 200)
+				.padding(.top)
 		}
 		.padding(.vertical)
 	}

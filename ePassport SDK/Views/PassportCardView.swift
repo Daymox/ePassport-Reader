@@ -19,6 +19,7 @@ struct PassportCardView: View {
 	@State var isDocumentsExpanded = false
 	@State var isChipInfoExpanded = false
 	@State var isValidityInfoExpanded = false
+	@State var isIssuingCountryInfoExpanded = false
 	@State var isHashesInfoExpanded = false
 	
 	var body: some View {
@@ -67,6 +68,11 @@ struct PassportCardView: View {
 					ValidityInformation(passport: $passport)
 				}
 			}
+			Section(header: disclosureHeader(title: "Información País Emisor", isExpanded: $isIssuingCountryInfoExpanded)) {
+				if isIssuingCountryInfoExpanded {
+					IssuingCountryInformation(passport: $passport)
+				}
+			}
 			Section(header: disclosureHeader(title: "Información HASHES", isExpanded: $isHashesInfoExpanded)) {
 				if isHashesInfoExpanded {
 					HashesInformation(passport: $passport)
@@ -90,7 +96,8 @@ struct PersonalInformation: View {
 			lastName: passport.lastName,
 			country: passport.nationality,
 			birthDate: dateFormatter(passport.dateOfBirth),
-			gender: passport.gender)
+			gender: passport.gender,
+			signatureImage: (passport.signatureImage ?? UIImage(named: "signature"))!)
 	}
 }
 
@@ -130,6 +137,14 @@ struct ValidityInformation: View {
 	}
 }
 
+struct IssuingCountryInformation: View {
+	@Binding var passport: NFCPassportModel
+	
+	var body: some View {
+		IssuingCountryInfoView(passport: $passport)
+	}
+}
+
 struct HashesInformation: View {
 	
 	@Binding var passport: NFCPassportModel
@@ -154,7 +169,7 @@ struct PassportCard: PreviewProvider {
 		return NavigationView {
 			PassportCardView(passport: .constant(passport))
 				.environmentObject(userSettings)
-		}
+		} 
 	}
 	
 	private static func loadPassportDataFromJSON() -> [String: String]? {

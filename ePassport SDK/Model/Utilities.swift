@@ -76,7 +76,21 @@ struct DisclosureHeader: View {
 	}
 }
 
-struct LabelValuePair: View {
+struct Header: View {
+	let label: String
+	let value: String
+	
+	var body: some View {
+		VStack(alignment: .leading, spacing: 8) {
+			Text(label)
+				.fontWeight(.bold)
+			Text(value)
+		}
+		.padding(.vertical)
+	}
+}
+
+struct LabelValuePair: View, Identifiable {
 	let id = UUID()
 	let label: String
 	let value: String
@@ -86,20 +100,6 @@ struct LabelValuePair: View {
 			Text(label)
 				.fontWeight(.bold)
 			Spacer()
-			Text(value)
-		}
-		.padding(.vertical)
-	}
-}
-
-struct Header: View {
-	let label: String
-	let value: String
-	
-	var body: some View {
-		VStack(alignment: .leading, spacing: 8) {
-			Text(label)
-				.fontWeight(.bold)
 			Text(value)
 		}
 		.padding(.vertical)

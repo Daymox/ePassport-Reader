@@ -61,14 +61,12 @@ struct ValidityInfoView: View {
 		}()
 		
 		var activeAuthentication: String
-		if passport.isChipAuthenticationSupported {
-			switch passport.chipAuthenticationStatus {
-			case .success:
+		if passport.activeAuthenticationSupported {
+			switch passport.activeAuthenticationPassed { 
+			case true:
 				activeAuthentication = "SUCCESS"
-			case .failed:
+			case false:
 				activeAuthentication = "FAILED"
-			case .notDone:
-				activeAuthentication = "NOT SUPPORTED"
 			}
 		} else {
 			activeAuthentication = "NOT SUPPORTED"
@@ -91,6 +89,40 @@ struct ValidityInfoView: View {
 			LabelValuePair(label: "Data Group Hashes", value: passport.passportDataNotTampered ? "SUCCESS" : "FAILED")
 			LabelValuePair(label: "Document Signing", value: passport.passportCorrectlySigned ? "SUCCESS" : "FAILED")
 		}
+	}
+}
+
+struct IssuingCountryInfoView: View {
+	@Binding var passport: NFCPassportModel
+	
+	var body: some View {
+		let section = getCertificateSigningCertDetails(certItems: self.passport.documentSigningCertificate?.getItemsAsDict())
+		
+		ForEach(section) { item in
+			LabelValuePair(label: item.label, value: item.value)
+		}
+	}
+	
+	
+	func getCertificateSigningCertDetails(certItems: [CertificateItem: String]?) -> [LabelValuePair] {
+		let titles: [CertificateItem] = [
+			.serialNumber,
+//			.signatureAlgorithm,
+//			.publicKeyAlgorithm,
+//			.fingerprint,
+			.issuerName,
+			.subjectName,
+//			.notBefore,
+//			.notAfter
+		]
+		
+		var items = [LabelValuePair]()
+		
+		for title in titles {
+			items.append(LabelValuePair(label: title.rawValue, value: certItems?[title] ?? ""))
+		}
+		
+		return items
 	}
 }
 
